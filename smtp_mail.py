@@ -17,10 +17,10 @@ def send_mail(sender, password, receivers, mail_subject, mail_content, attach_fi
     message = MIMEMultipart()
 
     # 发件人
-    message['From'] = _format_addr('北京天瑞宁科技有限公司 <%s>' % sender)
+    message['From'] = _format_addr('发送方 <%s>' % sender)
 
     # 收件人
-    message['To'] =  _format_addr('安徽大学 <12182302@qq.com>')
+    message['To'] =  _format_addr('接收方 <12182302@qq.com>')
 
     # 邮件标题
     message['Subject'] = Header(mail_subject, 'utf-8').encode()
@@ -68,9 +68,9 @@ def send_mail(sender, password, receivers, mail_subject, mail_content, attach_fi
 
 if __name__ == '__main__':
     send_mail(
-        sender = '12182302@qq.com', 
-        password = 'eejqfekeqsvocahh',
-        receivers = ['1253709703@qq.com', '12182302@qq.com', '15801218069@139.com'],
+        sender = '邮箱', 
+        password = '密码',
+        receivers = ['接收邮箱1', '接收邮箱2', '接收邮箱3'],
         mail_subject = '温馨提示',
         mail_content = '请查收附件，谢谢！',
         attach_file_path = '123.txt'
