@@ -20,7 +20,7 @@ def send_mail(sender, password, receivers, mail_subject, mail_content, attach_fi
     message['From'] = _format_addr('发送方 <%s>' % sender)
 
     # 收件人
-    message['To'] =  _format_addr('接收方 <12182302@qq.com>')
+    message['To'] =  _format_addr('接收方 <test@aa.bb>')
 
     # 邮件标题
     message['Subject'] = Header(mail_subject, 'utf-8').encode()
